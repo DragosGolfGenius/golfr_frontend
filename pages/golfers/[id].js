@@ -6,7 +6,7 @@ import { getUsernameById } from '../../lib/userById'
 
 const ids = () => {
   var id_retrieved = null;
-  if ( typeof window !== "undefined" ) {
+  if ( typeof window !== 'undefined' ) {
     var pathArray = window.location.pathname.split('/')
     id_retrieved = pathArray[pathArray.length - 1]
   }
