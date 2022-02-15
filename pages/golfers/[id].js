@@ -7,7 +7,7 @@ import { getUsernameById } from '../../lib/userById'
 const Ids = () => {
   let idRetrieved = null
   if ( typeof window !== 'undefined' ) {
-    let pathArray = window.location.pathname.split('/')
+    const pathArray = window.location.pathname.split('/')
     idRetrieved = pathArray[pathArray.length - 1]
   }
   const { scores, error } = useScores(idRetrieved)
