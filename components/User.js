@@ -4,7 +4,6 @@ const User = name => (
       {name.name}
     </h1>
   </div>
-  
 )
 
 export default User

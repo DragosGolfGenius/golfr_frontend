@@ -1,17 +1,17 @@
 import Layout from '../../components/Layout'
 import ScoreCard from '../../components/ScoreCard'
-import useScores  from '../../lib/useScores'
+import useScores from '../../lib/useScores'
 import User from '../../components/User'
 import { getUsernameById } from '../../lib/userById'
 
-const ids = () => {
-  var id_retrieved = null;
+const Ids = () => {
+  let idRetrieved = null
   if ( typeof window !== 'undefined' ) {
-    var pathArray = window.location.pathname.split('/')
-    id_retrieved = pathArray[pathArray.length - 1]
+    let pathArray = window.location.pathname.split('/')
+    idRetrieved = pathArray[pathArray.length - 1]
   }
-  const { scores, error } = useScores(id_retrieved)
-  const { user, errorUser} = getUsernameById(id_retrieved)
+  const { scores, error } = useScores(idRetrieved)
+  const { user, errorUser } = getUsernameById(idRetrieved)
 
   return (
     <Layout>
@@ -38,4 +38,4 @@ const ids = () => {
   )
 }
 
-export default ids
+export default Ids
