@@ -3,13 +3,12 @@ import ScoreCard from '../../components/ScoreCard'
 import useScores from '../../lib/useScores'
 import User from '../../components/User'
 import { getUsernameById } from '../../lib/userById'
+import { useRouter } from 'next/dist/client/router'
 
 const Ids = () => {
-  let idRetrieved = null
-  if ( typeof window !== 'undefined' ) {
-    const pathArray = window.location.pathname.split('/')
-    idRetrieved = pathArray[pathArray.length - 1]
-  }
+  const router = useRouter()
+  const idRetrieved = parseInt(router.query.id, 10)
+
   const { scores, error } = useScores(idRetrieved)
   const { user, errorUser } = getUsernameById(idRetrieved)
 
