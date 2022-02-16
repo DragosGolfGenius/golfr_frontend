@@ -2,7 +2,7 @@ import Layout from '../../components/Layout'
 import ScoreCard from '../../components/ScoreCard'
 import useScores from '../../lib/useScores'
 import User from '../../components/User'
-import { getUsernameById } from '../../lib/userById'
+import { useUserById } from '../../lib/userById'
 import { useRouter } from 'next/dist/client/router'
 
 const Ids = () => {
@@ -10,7 +10,7 @@ const Ids = () => {
   const idRetrieved = parseInt(router.query.id, 10)
 
   const { scores, error } = useScores(idRetrieved)
-  const { user, errorUser } = getUsernameById(idRetrieved)
+  const { user, errorUser } = useUserById(idRetrieved)
 
   return (
     <Layout>
@@ -19,7 +19,7 @@ const Ids = () => {
           error
         ) : (
           <>
-            {user && <User name = {user.name} />}
+            {user && <User data = {user.name} />}
             {scores && scores.map(score => (
               <ScoreCard
                 key = {score.id}

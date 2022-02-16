@@ -1,7 +1,7 @@
-const User = name => (
-  <div className = "nume">
+const User = data => (
+  <div className = "name">
     <h1>
-      {name.name}
+      {data.name}
     </h1>
   </div>
 )
