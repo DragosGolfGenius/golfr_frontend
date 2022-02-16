@@ -1,9 +1,8 @@
-const User = data => (
+const User = ({ user }) => (
   <div className = "name">
     <h1>
-      {data.name}
+      {user.name}
     </h1>
   </div>
 )
-
 export default User

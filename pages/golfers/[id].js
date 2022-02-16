@@ -19,7 +19,7 @@ const Ids = () => {
           error
         ) : (
           <>
-            {user && <User data = {user.name} />}
+            {user && <User user = {user} />}
             {scores && scores.map(score => (
               <ScoreCard
                 key = {score.id}
