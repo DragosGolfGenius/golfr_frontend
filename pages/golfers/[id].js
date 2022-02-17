@@ -28,6 +28,7 @@ const Ids = () => {
                 playedAt = {score.played_at}
                 userId = {score.user_id}
                 userName = {score.user_name}
+                number_of_scores = {score.number_of_scores}
               />
             ))}
           </>
