@@ -40,8 +40,7 @@ const ScorePostWidget = () => {
           <div className="border border-dashed border-gray-300 p-3 my-1 lg:w-1/3 md:w-1/2">
             <div>
               Number of scores
-              <select
-                value = {numberOfScores}
+              <select value = {numberOfScores}
                 className = "form-input h-15 w-20 ml-3 my-2"
                 onChange={e => setNumberOfScores(parseInt(e.target.value))}>
                 <option value = "9">9</option>
